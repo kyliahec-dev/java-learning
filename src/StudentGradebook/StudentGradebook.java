@@ -22,7 +22,6 @@ public class StudentGradebook {
             }
             return grades;
         }
-
         public static double calculateAvg(int[] grades){
             double total = 0;
 

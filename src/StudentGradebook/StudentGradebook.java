@@ -5,6 +5,8 @@ public class StudentGradebook {
     public static void main(String[] args) {
         int[] grades = collectGrades();
         double avg = calculateAvg(grades);
+        int highest = findHighest(grades);
+        int lowest = findLowest(grades);
     }
          public static int[] collectGrades() {
             //User input
@@ -30,4 +32,24 @@ public class StudentGradebook {
             }
             return total / grades.length;
         }
-}
+        public static int findHighest(int[] grades) {
+            int highest = grades[0];
+
+            for (int count = 0; count < grades.length; count++){
+                if (grades[count] > highest){
+                    highest = grades[count];
+                }
+            }
+            return highest;
+        }
+        public static int findLowest(int[] grades) {
+            int lowest = grades[0];
+
+            for (int count = 0; count < grades.length; count++){
+                if (grades[count] < lowest){
+                    lowest = grades[count];
+                }
+            }
+            return lowest;
+        }
+    }

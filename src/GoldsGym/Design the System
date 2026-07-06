@@ -1,0 +1,52 @@
+Classes (nouns):
+- Member
+- Location
+- Membership
+----------------------------------------------------
+
+Fields (what it has):
+  Member
+----------
+name - String
+dob - LocalDate (Or we create an abstract class)
+gender - enum
+address - (separate class)
+memberPhoto - BufferedImage (Or we create an abstract class)
+memberId - int
+membershipPlan - String
+memberSignature - String
+
+ Location
+----------
+address
+name
+
+Membership
+----------
+status
+plan
+monthlyFee
+annualFee
+renewalDate
+
+-------------------------------------------------------
+
+Methods (what it does):
+ Member
+----------
+createMembership()
+upgradeMembership()
+cancelMembership()
+checkIn()
+changeMembership()
+pauseMembership()
+
+Location
+----------
+isOpen()
+getHours()
+countCheckedInMembers()
+
+Membership
+----------
+

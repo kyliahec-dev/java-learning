@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class StudentGradebook {
     public static void main(String[] args) {
         int[] grades = collectGrades();
-        double avg = calculateAvg(grades);
+        double avg = calculateAverage(grades);
         int highest = findHighest(grades);
         int lowest = findLowest(grades);
     }
@@ -24,7 +24,7 @@ public class StudentGradebook {
             }
             return grades;
         }
-        public static double calculateAvg(int[] grades){
+        public static double calculateAverage(int[] grades){
             double total = 0;
 
             for (int count = 0; count < grades.length; count++){

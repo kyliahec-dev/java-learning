@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class StudentGradebook {
     public static void main(String[] args) {
         int[] grades = collectGrades();
+        double avg = calculateAvg(grades);
     }
          public static int[] collectGrades() {
             //User input
@@ -14,11 +15,20 @@ public class StudentGradebook {
 
             int newGrade;
 
-            for(int count = 0;count<grades.length;count++){
+            for(int count = 0;count < grades.length;count++){
                 System.out.print("Enter grade number " + (count + 1) + ": ");
                 newGrade = scanner.nextInt();
                 grades[count] = newGrade;
             }
             return grades;
+        }
+
+        public static double calculateAvg(int[] grades){
+            double total = 0;
+
+            for (int count = 0; count < grades.length; count++){
+                total = grades[count] + total;
+            }
+            return total / grades.length;
         }
 }
